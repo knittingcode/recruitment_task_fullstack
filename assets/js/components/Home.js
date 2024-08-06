@@ -1,8 +1,7 @@
-// ./assets/js/components/Home.js
-
 import React, {Component} from 'react';
 import {Route, Redirect, Switch, Link} from 'react-router-dom';
 import SetupCheck from "./SetupCheck";
+import ExchangeRatesTable from './ExchangeRatesTable'; // Importuj komponent
 
 class Home extends Component {
 
@@ -16,13 +15,16 @@ class Home extends Component {
                             <li className="nav-item">
                                 <Link className={"nav-link"} to={"/setup-check"}> React Setup Check </Link>
                             </li>
-
+                            <li className="nav-item">
+                                <Link className={"nav-link"} to={"/exchange-rates"}> Exchange rates </Link>
+                            </li>
                         </ul>
                     </div>
                 </nav>
                 <Switch>
-                    <Redirect exact from="/" to="/setup-check" />
+                    <Redirect exact from="/" to="/setup-check"/>
                     <Route path="/setup-check" component={SetupCheck} />
+                    <Route path="/exchange-rates/:date?" component={ExchangeRatesTable} />
                 </Switch>
             </div>
         )
