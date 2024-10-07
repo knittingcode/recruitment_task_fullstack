@@ -56,8 +56,8 @@ class ExchangeRatesController extends AbstractController {
 
             return new JsonResponse([
                 'selectedDate' => $date,
-                'rates' => $rates,
-                'todayRates' => $todayRates,
+                'rates' => $rates['rates'],
+                'todayRates' => $todayRates['rates'],
             ]);
 
         } catch (\Exception $e) {

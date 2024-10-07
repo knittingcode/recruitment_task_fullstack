@@ -8,7 +8,8 @@
 class Currency {
 
     // Currency codes
-    const EUR = 'EUR';
+	const PLN = 'PLN';
+	const EUR = 'EUR';
     const USD = 'USD';
     const CZK = 'CZK';
     const IDR = 'IDR';
@@ -16,7 +17,8 @@ class Currency {
 
     // Currency names
     private static $names = [
-        self::EUR => 'Euro',
+		self::PLN => 'Złotówki',
+		self::EUR => 'Euro',
         self::USD => 'US Dollar',
         self::CZK => 'Czech Koruna',
         self::IDR => 'Indonesian Rupiah',
