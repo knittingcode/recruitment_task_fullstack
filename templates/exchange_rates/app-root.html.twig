@@ -9,4 +9,10 @@
      <!-- React Root element -->
      <div id="root"></div>
 
+     <script>
+         // Przekazanie danych do aplikacji React przez zmienną window.__INITIAL_DATA__
+         window.__INITIAL_DATA__ = {{ exchangeRates|json_encode|raw }};
+         console.log({{ exchangeRates|json_encode|raw }})
+     </script>
+
  {% endblock %}
